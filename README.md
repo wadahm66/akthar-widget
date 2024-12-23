@@ -2,7 +2,7 @@
 
 This is a starter template for creating embeddable widgets with React by [MakerKit](https://makerkit.dev).
 
-To learn more about how we created this template, check out our [blog post](https://makerkit.dev/blog/how-to-create-an-embeddable-widget-with-react).
+To learn more about how we created this template, check out our [blog post](https://makerkit.dev/blog/tutorials/embeddable-widgets-react).
 
 ## ✨ Features
 
