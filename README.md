@@ -6,10 +6,10 @@ To learn more about how we created this template, check out our [blog post](http
 
 ## ✨ Features
 
-🛡️ **Fully Isolated** - Shadow DOM encapsulation prevents style conflicts
-🚀 **Modern Stack** - Built with React 19, TypeScript, and Vite
-🔌 **Simple Integration** - Single line of code to embed
-🛠️ **Developer Experience** - Hot reload, TypeScript, and modern tooling
+- 🛡️ **Fully Isolated** - Shadow DOM encapsulation prevents style conflicts
+- 🚀 **Modern Stack** - Built with React 19, TypeScript, and Vite
+- 🔌 **Simple Integration** - Single line of code to embed
+- 🛠️ **Developer Experience** - Hot reload, TypeScript, and modern tooling
 
 ## Getting Started
 
