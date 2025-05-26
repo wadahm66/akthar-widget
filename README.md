@@ -48,7 +48,7 @@ The project is structured as follows:
 To clone the repository, you can use the following command:
 
 ```bash
-git clone https://github.com/makerkit/react-widget-starter.git
+git clone https://github.com/makerkit/react-embeddable-widget.git
 ```
 
 ### Installing Dependencies
