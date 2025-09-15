@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { WidgetContext } from '../lib/context';
-import StockDisplay from './StockDisplay';
+import UniversalBundleTemplate from './UniversalBundleTemplate';
 
 export function Widget() {
   const { isOpen, setIsOpen } = useContext(WidgetContext);
@@ -22,7 +22,7 @@ export function Widget() {
 
       <div className='widget-content'>
         {/* Your widget content goes here */}
-        <StockDisplay />
+        <UniversalBundleTemplate />
       </div>
     </div>
   );
