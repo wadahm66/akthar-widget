@@ -19,9 +19,7 @@ function onReady() {
 
     shadowRoot.id = 'widget-root';
 
-    const component = (
-      <WidgetContainer clientKey={clientKey} />
-    );
+    const component = <WidgetContainer clientKey={clientKey} />;
 
     shadow.appendChild(shadowRoot);
     injectStyle(shadowRoot);
@@ -37,7 +35,9 @@ function injectStyle(shadowRoot: HTMLElement) {
   const link = document.createElement('link');
   link.rel = 'stylesheet';
   const fileName = process.env.WIDGET_NAME || 'widget';
-  link.href = process.env.WIDGET_CSS_URL || `/${fileName}.css`;
+  // link.href = process.env.WIDGET_CSS_URL || `/${fileName}.css`;
+  link.href =
+    'https://ubytivbzlhyyqacqjicp.supabase.co/storage/v1/object/public/Snippets/widget.css';
   shadowRoot.appendChild(link);
 }
 

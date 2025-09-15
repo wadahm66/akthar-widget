@@ -10,6 +10,8 @@ import injectProcessEnv from 'rollup-plugin-inject-process-env';
 import nodePolyfills from 'rollup-plugin-polyfill-node';
 import postcss from 'rollup-plugin-postcss';
 import tsConfigPaths from 'rollup-plugin-tsconfig-paths';
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 const args = parseArgs({
   options: {
@@ -27,7 +29,7 @@ const args = parseArgs({
 
 const env = args.values.environment;
 const production = env === 'production';
-let environmentVariablesPath = [ './.env.development' ];
+let environmentVariablesPath = ['./.env.development'];
 
 console.log(`Building widget for ${env} environment...`);
 
@@ -83,11 +85,12 @@ export default {
     }),
     postcss({
       extensions: ['.css'],
-      minimize: true,
+      minimize: production,
       extract: true,
       inject: {
         insertAt: 'top',
       },
+      plugins: [tailwindcss(), autoprefixer()],
     }),
     commonjs(),
     nodePolyfills({
@@ -101,10 +104,10 @@ export default {
         module: true,
         toplevel: true,
         unsafe_arrows: true,
-        drop_console: true,
+        drop_console: production,
         drop_debugger: true,
       },
       output: { quote_style: 1 },
-    })
+    }),
   ],
 };
